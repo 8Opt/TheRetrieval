@@ -10,6 +10,8 @@ cd ../
 # Run backend
 echo "Moving to backend, then run backend"
 cd ./backend/app
+python3 -m pip install -r requirements.txt
+
 # Assuming uvicorn requires typing_extensions (modify if not)
 if [ -n "$VIRTUAL_ENV" ]; then
   # Use uvicorn within virtual environment (if activated)
