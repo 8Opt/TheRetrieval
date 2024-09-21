@@ -4,9 +4,9 @@ import json
 from fastapi import APIRouter, HTTPException, Request, Response
 from fastapi.responses import JSONResponse
 
-from app.api.v1.searching import search_by_text
-from app.core.config import Environment
-from app.core.logger import set_logger
+from api.v1.searching import search_by_text
+from core.config import Environment
+from core.logger import set_logger
 
 
 search_route = APIRouter(

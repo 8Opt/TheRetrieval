@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Request, Response
 
-from app.api.v1.base import generate_quote
+from api.v1.base import generate_quote
 
 base_route = APIRouter()
 
