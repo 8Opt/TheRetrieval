@@ -42,8 +42,8 @@ async def lifespan(app):
     # Setup Vector Store
     logging.info("[INFO] Setup Vector Store ...")
     root_features = os.path.join(env_dir.root, env_dir.features)
-    bin_file= os.path.join(root_features, f'{config.embedding_model.bin_name}.bin')
-    
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+    bin_file= os.path.join(project_root, root_features, f'{config.embedding_model.bin_name}.bin')
     vector_store = config.vector_store(env_dir.root, bin_file, id2img_fps, config.device, config.embedding_model)
     app.state.vector_store = vector_store
 
