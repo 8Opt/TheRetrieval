@@ -12,8 +12,9 @@ ignore_warning()
 
 @dataclass
 class Environment:
+    # Environment of the dataset
     device = "cuda"
-    root = "../db"                  # Need to go outside `/backend`
+    root = "db"                  # Need to go outside `/backend`
     features = "features"
     lst_keyframes = {
         'path': "s_optimized_keyframes", 
