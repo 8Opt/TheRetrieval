@@ -1,2 +1,2 @@
-from app.routes.base import base_route
-from app.routes.searching import search_route
+from routes.base import base_route
+from routes.searching import search_route

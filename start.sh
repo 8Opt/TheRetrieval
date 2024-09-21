@@ -13,8 +13,13 @@ cd ./backend
 python3 -m pip install -r requirements.txt
 cd ../
 
+# Install PyTorch
+if ! python3 -c "import torch"; then
+  pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+fi
+ 
+# Moving to app and run the app
 echo "Moving to app and run the app"
-
 cd ./backend/app
 # Assuming uvicorn requires typing_extensions (modify if not)
 if [ -n "$VIRTUAL_ENV" ]; then
